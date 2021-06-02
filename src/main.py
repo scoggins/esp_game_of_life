@@ -6,8 +6,11 @@ from app.esp_game_of_life import App
 
 def download_and_install_update_if_available(config):
     if 'wifi' in config:
-        o = OTAUpdater('https://github.com/scoggins/esp_game_of_life')
-        o.download_and_install_update_if_available(config['wifi']['ssid'], config['wifi']['password'])
+        o = OTAUpdater(github_repo=config['github']['repo'],
+                       github_src_dir=config['github']['src_dir'],
+                       main_dir=config['github']['main_dir']
+        )
+        o.install_update_if_available_after_boot(config['wifi']['ssid'], config['wifi']['password'])
     else:
         print('No WIFI configured, skipping updates check')
 
