@@ -1,0 +1,20 @@
+{
+    "python.linting.enabled": true,
+    "python.jediEnabled": false,
+
+    // Loaded Stubs:  esp32-micropython-1.15.0 
+    "python.autoComplete.extraPaths": [".micropy/BradenM-micropy-stubs-0111b91/frozen", ".micropy/BradenM-micropy-stubs-14010d7/frozen", ".micropy/BradenM-micropy-stubs-0111b91/stubs", ".micropy/esp32_game_of_life"],
+    "python.autoComplete.typeshedPaths":  [".micropy/BradenM-micropy-stubs-0111b91/frozen", ".micropy/BradenM-micropy-stubs-14010d7/frozen", ".micropy/BradenM-micropy-stubs-0111b91/stubs", ".micropy/esp32_game_of_life"],
+    "python.analysis.typeshedPaths":  [".micropy/BradenM-micropy-stubs-0111b91/frozen", ".micropy/BradenM-micropy-stubs-14010d7/frozen", ".micropy/BradenM-micropy-stubs-0111b91/stubs", ".micropy/esp32_game_of_life"],
+
+    "python.linting.pylintEnabled": true,
+    "python.pythonPath": "/Users/cogginss/src/zethos/micropy/.venv/bin/python",
+    "python.analysis.extraPaths": [
+        ".micropy/BradenM-micropy-stubs-0111b91/frozen",
+        ".micropy/BradenM-micropy-stubs-14010d7/frozen",
+        ".micropy/BradenM-micropy-stubs-0111b91/stubs",
+        ".micropy/esp32_game_of_life"
+    ],
+    "python.languageServer": "Microsoft",
+    "python.linting.flake8Enabled": false
+}
