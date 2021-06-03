@@ -1,7 +1,7 @@
 # main.py
 import ujson
 import machine
-from app.lib.ota_update.ota_updater import OTAUpdater
+from app.utils.ota_update.ota_updater import OTAUpdater
 from app.esp_game_of_life import App
 
 
