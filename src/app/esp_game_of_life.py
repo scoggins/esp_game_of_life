@@ -5,6 +5,7 @@ import random
 import machine
 from machine import Timer, Pin
 import neopixel
+import micropython
 
 LED_PIN = machine.Pin(4, Pin.OUT)
 MATRIX_SIZE = 16
@@ -166,5 +167,8 @@ class App:
 
 
     def led_timer_callback(self):
+        micropython.schedule(self.update_loop, None)
+
+    def update_loop(self):
         self.matrix.update_matrix(self.board.get_matrix(), "led_state")
         self.board.update_board()
