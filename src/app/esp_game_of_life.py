@@ -172,9 +172,8 @@ class App:
         self.led_timer.deinit()
 
     def led_timer_callback(self, notused):
-        print("Timer callback")
-        #micropython.schedule(self.update_loop_ref, None)
+        micropython.schedule(self.update_loop_ref, None)
 
-    def update_loop(self):
+    def update_loop(self, args):
         self.matrix.update_matrix(self.board.get_matrix(), "led_state")
         self.board.update_board()
