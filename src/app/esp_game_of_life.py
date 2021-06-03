@@ -163,11 +163,16 @@ class App:
         self.config = config
         self.led_timer = Timer(0)
         self.led_timer_callback_ref = self.led_timer_callback
+
+    def start(self):
         self.led_timer.init(period=1000, mode=Timer.PERIODIC, callback=self.led_timer_callback_ref)
 
+    def stop(self):
+        self.led_timer.deinit()
 
     def led_timer_callback(self):
-        micropython.schedule(self.update_loop, None)
+        print("Timer trigger")
+        #micropython.schedule(self.update_loop, None)
 
     def update_loop(self):
         self.matrix.update_matrix(self.board.get_matrix(), "led_state")

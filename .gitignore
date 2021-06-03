@@ -147,3 +147,5 @@ dmypy.json
 !src/lib
 
 config.json
+
+*~
